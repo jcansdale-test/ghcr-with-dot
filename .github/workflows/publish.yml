@@ -21,7 +21,7 @@ jobs:
         run: docker build . -t ${IMAGE,,} # lowercase IMAGE
 
       - name: Login to ghcr.io
-        run: docker login https://docker.pkg.github.com -u token --password-stdin <<< ${{ github.token }}
+        run: docker login ghcr.io -u token --password-stdin <<< ${{ github.token }}
 
       - name: Publish image
         run: docker push ${IMAGE,,} # lowercase IMAGE
