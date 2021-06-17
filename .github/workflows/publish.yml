@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE: docker.pkg.github.com/${{ github.repository }}/with.dot:latest
+  IMAGE: ghcr.io/${{ github.repository }}
 
 jobs:
   publish:
